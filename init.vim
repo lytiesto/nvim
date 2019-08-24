@@ -1,4 +1,5 @@
 let mapleader = " "                                                                                                            
+let g:python3_host_prog='/usr/bin/python3'
 syntax on
 set number
 set norelativenumber
@@ -17,8 +18,8 @@ set tags=/home/fish/document/code/www/tp/tags
 ""set softtabstop=4
 au FileType html,vim,javascript setl shiftwidth=2
 au FileType html,vim,javascript setl tabstop=2
-au FileType java,php,go setl shiftwidth=4
-au FileType java,php,go setl tabstop=4
+au FileType java,php,go,json setl shiftwidth=4
+au FileType java,php,go,json setl tabstop=4
 au BufNewFile,BufRead *.py
       \ set tabstop=4 |
       \ set softtabstop=4 |
@@ -93,7 +94,7 @@ call plug#end()
 
 colorscheme snazzy
 "colorscheme monokai 
-"let g:SnazzyTransparent = 1 
+let g:SnazzyTransparent = 1 
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
