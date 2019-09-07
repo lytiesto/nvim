@@ -74,10 +74,11 @@ noremap L 5l
 call plug#begin('~/.config/nvim/plugged')
                                         
 Plug 'vim-airline/vim-airline'
-Plug 'connorholyday/vim-snazzy'
+"Plug 'connorholyday/vim-snazzy'
+Plug 'liuchengxu/space-vim-theme'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do':'~/.vim/plugged/gocode/vim/symlink.sh' }
-Plug 'nvie/vim-flake8'
+"Plug 'nvie/vim-flake8'
 "Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 "Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
@@ -102,9 +103,11 @@ Plug 'roxma/nvim-yarp'
 
 call plug#end()
 
-colorscheme snazzy
+"colorscheme snazzy
 "colorscheme monokai 
-let g:SnazzyTransparent = 1 
+"let g:SnazzyTransparent = 1 
+let g:space_vim_transp_bg = 1
+colorscheme space_vim_theme 
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
