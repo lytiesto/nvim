@@ -74,8 +74,12 @@ noremap L 5l
 call plug#begin('~/.config/nvim/plugged')
                                         
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Plug 'connorholyday/vim-snazzy'
 Plug 'liuchengxu/space-vim-theme'
+Plug 'Yggdroot/indentLine'
+
+Plug 'tpope/vim-commentary'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do':'~/.vim/plugged/gocode/vim/symlink.sh' }
 "Plug 'nvie/vim-flake8'
@@ -83,6 +87,8 @@ Plug 'liuchengxu/space-vim-theme'
 "Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 "Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 "auto complete
@@ -139,3 +145,53 @@ let g:ncm2#matcher = "substrfuzzy"
 let g:ncm2_jedi#python_version = 3
 let g:ncm2#match_highlight = 'sans-serif'
 
+" ===
+" === Airline
+" ===
+let g:airline_theme='dracula'
+let g:airline#extensions#coc#enabled = 0
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : 'Nm',
+      \ 'i'  : 'Is',
+      \ 'R'  : 'Rp',
+      \ 'c'  : 'Cg',
+      \ 'v'  : 'Vi',
+      \ 'V'  : 'Vl',
+      \ '' : 'Vb',
+      \ 's'  : 'S',
+      \ 'S'  : 'S',
+      \ '' : 'S',
+      \ }
+
+" ==
+" == NERDTree-git
+" ==
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
+
+" ===
+" === indentLine
+" ===
+let g:indentLine_char = '│'
+let g:indentLine_color_term = 238
+let g:indentLine_color_gui = '#333333'
+silent! unmap <LEADER>ig
+autocmd WinEnter * silent! unmap <LEADER>ig
