@@ -22,7 +22,7 @@ set hlsearch
 exec "nohlsearch"
 set incsearch
 
-set tags=/home/fish/document/code/www/tp/tags
+"set tags=/home/fish/document/code/www/tp/tags
 
 "set shiftwidth=4
 ""set softtabstop=4
@@ -75,7 +75,7 @@ call plug#begin('~/.config/nvim/plugged')
                                         
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'connorholyday/vim-snazzy'
+Plug 'connorholyday/vim-snazzy'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'Yggdroot/indentLine'
 
@@ -92,26 +92,26 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 "auto complete
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-github'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-match-highlight'
-Plug 'ncm2/ncm2-markdown-subscope'
+"Plug 'ncm2/ncm2'
+"Plug 'ncm2/ncm2-jedi'
+"Plug 'ncm2/ncm2-github'
+"Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2-path'
+"Plug 'ncm2/ncm2-match-highlight'
+"Plug 'ncm2/ncm2-markdown-subscope'
 "Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
-Plug 'phpactor/ncm2-phpactor'
+"Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+"Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+"Plug 'phpactor/ncm2-phpactor'
 
 
-Plug 'roxma/nvim-yarp'
+"Plug 'roxma/nvim-yarp'
 
 call plug#end()
 
-"colorscheme snazzy
+colorscheme snazzy
 "colorscheme monokai 
-"let g:SnazzyTransparent = 1 
+let g:SnazzyTransparent = 1 
 let g:space_vim_transp_bg = 1
 colorscheme space_vim_theme 
 
@@ -140,10 +140,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
-let ncm2#popup_delay = 5
-let g:ncm2#matcher = "substrfuzzy"
-let g:ncm2_jedi#python_version = 3
-let g:ncm2#match_highlight = 'sans-serif'
+"let ncm2#popup_delay = 5
+"let g:ncm2#matcher = "substrfuzzy"
+"let g:ncm2_jedi#python_version = 3
+"let g:ncm2#match_highlight = 'sans-serif'
 
 " ===
 " === Airline
